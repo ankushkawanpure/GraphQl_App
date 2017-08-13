@@ -4,8 +4,15 @@
 import {buildSchema} from 'graphql';
 
 const schema = buildSchema(`
+
+    type Friend {
+        id: ID,
+        name: String,
+        email: String
+    }
+    
     type Query {
-        hello: String
+        friend: Friend
     }
 `);
 

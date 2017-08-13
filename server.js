@@ -12,8 +12,12 @@ app.get('/', (req, res) => {
     res.send("Yo server stated");
 });
 
-const root = { hello : () => {
-    "Hi i'm ankush"
+const root = { friend : () => {
+    return {
+        "id": 223232,
+        "name": "Ankush Kawanpure",
+        "email": "aak3988@rit.edu",
+    }
 }};
 
 app.use('/graphql', graphqlHttp({
